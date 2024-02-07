@@ -2,19 +2,18 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="/style.css">
-    <title>Book app Spring</title>
+    <link rel="stylesheet" type="text/css" href="/index-style.css">
 </head>
 <body>
-<div class="header">
-    <h1>Book Library</h1>
-</div>
-
+<h1>Book Library</h1>
+<div th:replace="~{/fragments.html :: menu}"></div>
 <div class="books">
     <table>
         <thead>
         <tr>
-            <td>Title</td><td>Author</td><td>ISBM</td>
+            <td>Title</td>
+            <td>Author</td>
+            <td>ISBN</td>
         </tr>
         </thead>
         <tbody>
@@ -24,10 +23,7 @@
             <td th:text="${book.isbn}"></td>
         </tr>
         </tbody>
-
-
     </table>
 </div>
-
 </body>
 </html>

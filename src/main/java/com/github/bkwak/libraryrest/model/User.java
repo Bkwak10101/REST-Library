@@ -1,24 +1,27 @@
 package com.github.bkwak.libraryrest.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
-@Data
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode
-@Entity(name = "book")
-public class Book {
+@Data
+@Entity(name = "user")
+public class User {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    private String title;
-    private String author;
-    private String isbn;
+    @Column(unique = true)
+    private String login;
+    private String password;
+    private Role role;
+    private String name;
+    private String surname;
+
 }
+
