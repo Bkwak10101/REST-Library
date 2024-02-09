@@ -15,10 +15,16 @@ import lombok.NoArgsConstructor;
 @EqualsAndHashCode
 @Entity(name = "book")
 public class Book {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String title;
     private String author;
     private String isbn;
+    private boolean available;
+
+    public Book(int id) {
+        this.id = id;
+    }
 }

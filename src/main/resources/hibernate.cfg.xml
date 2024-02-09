@@ -16,5 +16,6 @@
 
         <mapping class="com.github.bkwak.libraryrest.model.User"/>
         <mapping class="com.github.bkwak.libraryrest.model.Book"/>
+        <mapping class="com.github.bkwak.libraryrest.model.Loan"/>
     </session-factory>
 </hibernate-configuration>

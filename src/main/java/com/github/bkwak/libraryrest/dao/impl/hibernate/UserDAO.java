@@ -1,5 +1,4 @@
-package com.github.bkwak.libraryrest.dao.impl;
-
+package com.github.bkwak.libraryrest.dao.impl.hibernate;
 
 import com.github.bkwak.libraryrest.dao.IUserDAO;
 import com.github.bkwak.libraryrest.model.User;

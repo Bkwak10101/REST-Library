@@ -1,4 +1,4 @@
-package com.github.bkwak.libraryrest.dao.impl;
+package com.github.bkwak.libraryrest.dao.impl.memory;
 
 import com.github.bkwak.libraryrest.dao.IUserDAO;
 import com.github.bkwak.libraryrest.model.Role;

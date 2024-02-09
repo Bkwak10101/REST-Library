@@ -12,4 +12,5 @@ public interface IBookDAO {
    void delete(int id);
    void update(Book book);
    List<Book> getByPattern(String pattern);
+   void persist(Book book);
 }

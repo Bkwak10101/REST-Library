@@ -19,9 +19,29 @@ public class User {
     @Column(unique = true)
     private String login;
     private String password;
+    @Enumerated(EnumType.STRING)
     private Role role;
     private String name;
     private String surname;
 
+    public User(String login, String password) {
+        this.login = login;
+        this.password = password;
+    }
+
+    public User(String login, String password, String name, String surname) {
+        this.login = login;
+        this.password = password;
+        this.name = name;
+        this.surname = surname;
+    }
+
+    public User(String login, String password, Role role, String name, String surname) {
+        this.login = login;
+        this.password = password;
+        this.role = role;
+        this.name = name;
+        this.surname = surname;
+    }
 }
 
