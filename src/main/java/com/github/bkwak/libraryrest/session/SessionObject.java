@@ -13,6 +13,15 @@ public class SessionObject {
         return loggedUser != null;
     }
 
+    public boolean isAdmin(){
+        if (isLogged()){
+            if(loggedUser.getRole().name().equals("ADMIN")){
+                return true;
+            }
+        }
+        return false;
+    }
+
     public User getLoggedUser() {
         return loggedUser;
     }
@@ -20,4 +29,6 @@ public class SessionObject {
     public void setLoggedUser(User loggedUser) {
         this.loggedUser = loggedUser;
     }
+
+
 }

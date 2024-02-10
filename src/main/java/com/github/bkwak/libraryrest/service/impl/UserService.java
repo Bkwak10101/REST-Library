@@ -23,6 +23,11 @@ public class UserService implements IUserService {
     }
 
     @Override
+    public boolean userExist(String login) {
+        return false;
+    }
+
+    @Override
     public void setInDb() {
         List<User> users = new ArrayList<>();
         users.add(new User("admin", DigestUtils.md5Hex("admin"), Role.ADMIN, "Ewa", "Nowak"));

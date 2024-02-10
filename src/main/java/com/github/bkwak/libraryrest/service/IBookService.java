@@ -11,9 +11,11 @@ public interface IBookService {
 
     List<Book> getAll();
 
+    List<Book> getByPattern(String pattern);
+
     void persist(Book book);
 
     void setInDb();
 
-    void update(int bookId);
+    void update(Book book);
 }
